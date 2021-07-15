@@ -1,13 +1,17 @@
-function add(a, b) {
+function add(a: number, b: number) {
   return a + b;
 }
 
 console.log(add(1, 2));
-console.log(add("Hello", "World"));
 
 class Point {
   x: number;
   y: number;
+
+  constructor(x: number, y: number) {
+    this.x = x;
+    this.y = y;
+  }
 
   move(x: number, y: number): void {
     this.x += p.x;
@@ -16,7 +20,7 @@ class Point {
   }
 }
 
-const p = new Point();
+const p = new Point(0, 0);
 
 p.move(1, 2);
 
@@ -28,7 +32,9 @@ const users: Array<User> = [
 ];
 
 function getUserAge(name: string): number {
-  return users.find(u => u.name === name).age;
+  const user = users.find(u => u.name === name);
+  if (!user) throw new Error(`User ${name} not found`);
+  return user.age;
 }
 
 console.log(`User 'Bro' has ${getUserAge("Bro")}`);
