@@ -1,0 +1,16 @@
+{
+  "name": "flw-academy-ts-basic-to-hero",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:flowingis/flw-academy-ts-basic-to-hero.git",
+  "author": "Luca Del Puppo <luca.delpuppo@flowing.it>",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc -d",
+    "build:watch": "tsc -d -w",
+    "serve": "node dist/index.js"
+  },
+  "dependencies": {
+    "typescript": "^4.3.5"
+  }
+}
